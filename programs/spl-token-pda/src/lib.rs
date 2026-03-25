@@ -32,8 +32,8 @@ pub struct CreateMint<'info> {
         init,
         payer = signer,
         mint::decimals = 6,
-        mint::authority = signer.key(),
-        mint::freeze_authority = signer.key(),
+        mint::authority = signer,
+        mint::freeze_authority = signer,
         seeds = [b"mint"],
         bump
     )]
